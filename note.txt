@@ -1,0 +1,25 @@
+service: xu ly logic, them xoa sua tim du lieu
+controller: xu ly request, lay thong tin tu request, 
+  truyen vao service va tra ve response
+route: tap hop cac http method (get, post, put, del,...)
+  ap dung middleware de can thiep req, response
+middleware: la mot thanh phan trung gian dung de 
+  read và can thiep req và response
+    und dung: authorization: xac thuc nguoi dung
+              authentication:
+authorization: kiem tra request cua user đó 
+  có dc quyen truy cap vào he thong ko
+    role: admin, user, manager,...
+authentication: login
+luong tu authentication -> authorization:
+  login thanh cong: tra ve access token va refresh token (vé)
+    access token de truy cap vao he thong
+    refresh token: dung de yeu cau cap lai access token
+  gửi request đề chỉnh sửa thông tin: access token để 
+    xác minh là người gửi yêu cầu chỉnh sửa thông tin
+      và thông tin bị chỉnh sửa có phải là 1 hay 0
+service > controller > router > server
+controller: [prdServices, userServices, ...]
+router: [prdControllers, userControllers,..]
+  tập hợp các http method, các path
+    
